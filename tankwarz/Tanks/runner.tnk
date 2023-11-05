@@ -1,0 +1,37 @@
+0!TankObject
+1!runner
+2!0
+3!Steel
+4!Silver Bullet
+5!Composite
+7!Johnson
+8!Cheap
+9!Standard
+10!Standard
+99!# Enter your code here.
+99!
+99!set current=0
+99!set arc=45
+99!set x=random()*10
+99!set y=random()*10
+99!while godest(x,y)!=2
+99!	call scansetangle(current)
+99!	while current<360
+99!		set id=scanclosest()
+99!		if id!=getid()
+99!			call firetrack(id)
+99!		else
+99!			set current=current+arc
+99!			call scansetangle(current)
+99!		endif
+99!	endwhile
+99!	set current=0
+99!endwhile
+99!
+99!
+99!
+99!
+99!
+99!
+99!
+99!

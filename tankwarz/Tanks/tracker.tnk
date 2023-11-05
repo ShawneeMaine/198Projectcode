@@ -1,0 +1,46 @@
+0!TankObject
+1!tracker
+2!350
+4!Tracker
+5!Light
+7!Cummings
+8!Cheap
+9!Long Range
+10!Long Range
+99!# Enter your code here.
+99!
+99!# Enter your code here.
+99!
+99!
+99!
+99!
+99!
+99!# Enter your code here.
+99!
+99!set x=30
+99!call godest(x+maxx()/2,maxy()/2)
+99!
+99!set ang=0
+99!while 1==1
+99!set gox=random()+maxx()/2
+99!set goy=random()+maxy()/2
+99!if godest(gox,goy)==2
+99!  set gox=random()+maxx()/2
+99!  set goy=random()+maxy()/2
+99!endif
+99!if scanclosest()!=getid()
+99! while scanclosest()!=getid()
+99!   call scansetdest(getxpos(scanclosest()),getypos(scanclosest()))
+99!   call firetarget(scanclosest()) 
+99!   if godest(gox,goy)==2
+99!     set gox=random()+maxx()/2
+99!     set goy=random()+maxy()/2
+99!#     set x=x*-1
+99!   endif
+99! endwhile
+99!endif
+99!set ang=ang+getscanarc()
+99!call scansetangle(ang)
+99!endwhile
+99!
+99!

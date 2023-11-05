@@ -1,0 +1,53 @@
+0!TankObject
+1!shotgun
+2!0
+3!Ceramic
+3!Titanium
+4!Grapeshot
+5!Light
+7!Johnson
+8!Cheap
+9!Standard
+10!GMC
+99!# Enter your code here.
+99!
+99!# Enter your code here.
+99!
+99!# Enter your code here.
+99!
+99!# Enter your code here.
+99!
+99!# Enter your code here.
+99!
+99!# Enter your code here.
+99!
+99!# Enter your code here.
+99!
+99!
+99!while 1==1
+99!set x=0
+99!set y=scanclosest()
+99!  set x2=random()*10
+99!  set y2=random()*10
+99!call godest(x2,y2)
+99!while y==getid()
+99!  set z=godest(x2,y2)
+99!  if z==2
+99!    set x2=random()*10
+99!    set y2=random()*10
+99!  endif
+99!  set x=x+10
+99!  call scansetangle(x)
+99!  set y=scanclosest()
+99!endwhile
+99!set x1=getxpos(y)+50
+99!set y1=getypos(y)+50
+99!call godest(x1,y1)
+99!call scansetdest(x1-50,y1-50)
+99!call firetrack(y)
+99!endwhile
+99!
+99!
+99!
+99!
+99!
